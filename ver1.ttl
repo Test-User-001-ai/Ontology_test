@@ -58,12 +58,21 @@
          rdfs:subClassOf :Human .
 
 
-###  http://www.examplegraph.com/New_class
-:New_class rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :worksWith ;
-                             owl:someValuesFrom :Human
-                           ] .
+###  http://www.examplegraph.com/New_Subject
+:New_Subject rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :worksWith ;
+                               owl:someValuesFrom :Human
+                             ] ;
+             owl:disjointWith :New_class_2 .
+
+
+###  http://www.examplegraph.com/New_class_2
+:New_class_2 rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :worksWith ;
+                               owl:someValuesFrom :Human
+                             ] .
 
 
 ###  http://www.examplegraph.com/2.0/Software
