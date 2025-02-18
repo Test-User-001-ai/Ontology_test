@@ -122,7 +122,9 @@
 
 ###  http://www.scmgraph.com/ChangeControl
 :ChangeControl rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty .
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Change_Control ;
+               rdfs:range xsd:string .
 
 
 ###  http://www.scmgraph.com/Deviation
