@@ -152,7 +152,9 @@
 
 ###  http://www.scmgraph.com/batchId
 :batchId rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :Batch .
+         rdfs:subPropertyOf :Batch ;
+         rdfs:domain :Batch ;
+         rdfs:range xsd:string .
 
 
 ###  http://www.scmgraph.com/blockedQuantity
@@ -212,7 +214,13 @@
 
 ###  http://www.scmgraph.com/manufacturingStage
 :manufacturingStage rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf :Batch .
+                    rdfs:subPropertyOf :Batch ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Batch
+                                                :Batch_Execution
+                                              )
+                                ] ;
+                    rdfs:range xsd:string .
 
 
 ###  http://www.scmgraph.com/materialDescription
