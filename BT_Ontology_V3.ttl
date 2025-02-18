@@ -1,0 +1,371 @@
+@prefix: <http://www.scmgraph.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.scmgraph.com/> .
+
+<http://www.scmgraph.com/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.scmgraph.com/belongsTo
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/has
+:has rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/hasChild
+:hasChild rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/hasParent
+:hasParent rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/isSupplierOf
+:isSupplierOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/locatedAt
+:locatedAt rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/manages
+:manages rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/manufacturedAt
+:manufacturedAt rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/producedBy
+:producedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/receivesOrder
+:receivesOrder rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/storedIn
+:storedIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/stores
+:stores rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/suppliedBy
+:suppliedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/triggeredBy
+:triggeredBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/triggers
+:triggers rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.scmgraph.com/usedBy
+:usedBy rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.scmgraph.com/Batch
+:Batch rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/CAPA
+:CAPA rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/ChangeControl
+:ChangeControl rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/Deviation
+:Deviation rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/Inventory
+:Inventory rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/Material
+:Material rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/Site
+:Site rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/Supplier
+:Supplier rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.scmgraph.com/batchId
+:batchId rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :Batch ;
+         rdfs:domain :Batch ;
+         rdfs:range xsd:string .
+
+
+###  http://www.scmgraph.com/blockedQuantity
+:blockedQuantity rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Inventory .
+
+
+###  http://www.scmgraph.com/capaCount
+:capaCount rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :CAPA .
+
+
+###  http://www.scmgraph.com/capaId
+:capaId rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :CAPA .
+
+
+###  http://www.scmgraph.com/ccCount
+:ccCount rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :ChangeControl .
+
+
+###  http://www.scmgraph.com/ccId
+:ccId rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :ChangeControl .
+
+
+###  http://www.scmgraph.com/deviationCount
+:deviationCount rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Deviation .
+
+
+###  http://www.scmgraph.com/deviationId
+:deviationId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Deviation .
+
+
+###  http://www.scmgraph.com/erpLastRefreshed
+:erpLastRefreshed rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/expirationDate
+:expirationDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/inventoryId
+:inventoryId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Inventory .
+
+
+###  http://www.scmgraph.com/manufacturedQuantity
+:manufacturedQuantity rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/manufacturingStage
+:manufacturingStage rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/materialDescription
+:materialDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Material .
+
+
+###  http://www.scmgraph.com/materialID
+:materialID rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :Material .
+
+
+###  http://www.scmgraph.com/materialType
+:materialType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :Material .
+
+
+###  http://www.scmgraph.com/pcCount
+:pcCount rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/siteId
+:siteId rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :Site .
+
+
+###  http://www.scmgraph.com/startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :Batch .
+
+
+###  http://www.scmgraph.com/stockOnHand
+:stockOnHand rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Inventory .
+
+
+###  http://www.scmgraph.com/supplierId
+:supplierId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :Supplier .
+
+
+###  http://www.scmgraph.com/supplierName
+:supplierName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :Supplier .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.scmgraph.com/Batch
+:Batch rdf:type owl:Class ;
+       rdfs:subClassOf :Lot .
+
+
+###  http://www.scmgraph.com/Batch_Execution
+:Batch_Execution rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :usedBy ;
+                                   owl:someValuesFrom :Batch
+                                 ] .
+
+
+###  http://www.scmgraph.com/Batch_Schedule
+:Batch_Schedule rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/CAPA
+:CAPA rdf:type owl:Class ;
+      rdfs:subClassOf :Quality_Assurance ;
+      owl:disjointWith :Change_Control .
+
+
+###  http://www.scmgraph.com/Change_Control
+:Change_Control rdf:type owl:Class ;
+                rdfs:subClassOf :Quality_Assurance .
+
+
+###  http://www.scmgraph.com/Child_Batch
+:Child_Batch rdf:type owl:Class ;
+             rdfs:subClassOf :Batch ;
+             owl:disjointWith :Parent_Batch .
+
+
+###  http://www.scmgraph.com/Deviation
+:Deviation rdf:type owl:Class ;
+           rdfs:subClassOf :Quality_Event .
+
+
+###  http://www.scmgraph.com/Enterprise
+:Enterprise rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/Inventory
+:Inventory rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/Lot
+:Lot rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/Material
+:Material rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/Parent_Batch
+:Parent_Batch rdf:type owl:Class ;
+              rdfs:subClassOf :Batch .
+
+
+###  http://www.scmgraph.com/Process
+:Process rdf:type owl:Class .
+
+
+###  http://www.scmgraph.com/Quality_Assurance
+:Quality_Assurance rdf:type owl:Class ;
+                   rdfs:subClassOf :Quality_Management ;
+                   owl:disjointWith :Quality_Event .
+
+
+###  http://www.scmgraph.com/Quality_Event
+:Quality_Event rdf:type owl:Class ;
+               rdfs:subClassOf :Quality_Management .
+
+
+###  http://www.scmgraph.com/Quality_Management
+:Quality_Management rdf:type owl:Class ;
+                    rdfs:subClassOf :Process .
+
+
+###  http://www.scmgraph.com/Site
+:Site rdf:type owl:Class ;
+      rdfs:subClassOf :Enterprise .
+
+
+###  http://www.scmgraph.com/Supplier
+:Supplier rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Batch_Execution
+                :Batch_Schedule
+                :Enterprise
+                :Inventory
+                :Lot
+                :Material
+                :Process
+                :Supplier
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
